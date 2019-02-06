@@ -4,15 +4,18 @@ import styled from "styled-components";
 
 const Container = styled.div`
   height: 60px;
-  padding: 15px 30px;
+  padding: 0 30px;
   border-top: 1px solid #d4d4d4;
   background: #fff;
   color: #505050;
   font-size: 11px;
   width: 100%;
   display: flex;
+  align-items: center;
 `
 const IconList = styled.ul`
+  display: flex;
+  align-items: center;
   list-style: none;
   margin-left: auto;
   & > li {
