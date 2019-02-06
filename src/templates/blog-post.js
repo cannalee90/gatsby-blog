@@ -9,11 +9,11 @@ import Utteranc from '../components/utteranc';
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const { author, title } = this.props.data.site.siteMetadata;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
         <p

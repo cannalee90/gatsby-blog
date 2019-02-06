@@ -7,14 +7,10 @@ import SEO from "../components/seo"
 
 class BlogIndex extends React.Component {
   render() {
-    const { data } = this.props
-    const { author, title } = data.site.siteMetadata;
-    const posts = data.allMarkdownRemark.edges
+    const { data } = this.props;
+    const posts = data.allMarkdownRemark.edges;
     return (
       <Layout
-        location={this.props.location}
-        title={title}
-        author={author}
       >
         <SEO
           title="All posts"
@@ -27,7 +23,7 @@ class BlogIndex extends React.Component {
             <div key={node.fields.slug}>
               <h3
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <Link to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
@@ -45,12 +41,6 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
