@@ -19,7 +19,7 @@ const Content = styled.main`
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, author } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     return (
       <WrapperContainer>
@@ -29,7 +29,10 @@ class Layout extends React.Component {
         <Content>
           {children}
         </Content>
-        <Footer></Footer>
+        <Footer
+          author={author}
+        >
+        </Footer>
       </WrapperContainer>
     )
   }
