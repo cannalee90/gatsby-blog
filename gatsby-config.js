@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Unfixed`,
+    title: `Unfixed blog`,
     author: `unfixed`,
     description: `Personal tech blog by unfixed`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://happy-heyrovsky-a01efb.netlify.com/`,
     social: {
       twitter: `unfixed2017`,
       github: 'cannalee90',
@@ -75,5 +75,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 }
