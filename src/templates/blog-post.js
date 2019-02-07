@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Utteranc from '../components/utteranc';
@@ -13,7 +12,8 @@ class BlogPostTemplate extends React.Component {
     const { author, title } = this.props.data.site.siteMetadata;
 
     return (
-      <Layout>
+      <Layout
+>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
         <p
@@ -23,7 +23,6 @@ class BlogPostTemplate extends React.Component {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
         />
-        <Bio />
 
         <ul
           style={{

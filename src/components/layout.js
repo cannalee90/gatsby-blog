@@ -38,6 +38,7 @@ const Content = styled.main`
   margin-right: auto;
   max-width: 768px;
   margin-top: 60px;
+  min-height: calc(100vh - 60px - 60px);
 `
 
 class Layout extends React.Component {
