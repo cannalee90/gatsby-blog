@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'Spoqa Han Sans', 'Sans-serif';
+    color: #505050;
   }
 
   a {
@@ -31,14 +32,17 @@ const WrapperContainer = styled.div`
   overflow: auto;
   display: flex;
   flex-flow: column;
+  background-color: #f4f4f4;
 `
 
 const Content = styled.main`
   margin-left: auto;
   margin-right: auto;
-  max-width: 768px;
-  margin-top: 60px;
-  min-height: calc(100vh - 60px - 60px);
+  max-width: 940px;
+  margin-top: 120px;
+  margin-bottom: 60px;
+  min-height: calc(100vh - 240px);
+  background-color: #fff;
 `
 
 class Layout extends React.Component {
