@@ -84,6 +84,7 @@ const Content = styled.main`
   margin-left: auto;
   margin-right: auto;
   max-width: 940px;
+  min-width: 940px;
   margin-top: 120px;
   margin-bottom: 60px;
   min-height: calc(100vh - 240px);

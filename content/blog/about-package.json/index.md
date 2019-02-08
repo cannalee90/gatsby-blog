@@ -1,11 +1,12 @@
 ---
 title: package-lock.json에 대해서
 date: "2019-02-08"
+summary: package-lock.json에 대해서 알아보았습니다.
 ---
 
 ### 개요
 
-프로젝트를 진행하면서 항상 `package-lock.json`이 변경되는 경우를 자주 겪었다. 애초에 이 파일이 무엇인지, 어떤 목적으로 쓰이는지 항상 궁금했었다. npm에 공식 사이트에 들어가서 간단하게 읽어보았는데 설명이 이해되지 않았다. 공식 문서를 읽어보면 `npm install`의 경우 `package-lock.json`을 우선적으로 사용해서 해당 커맨드를 실행한다고 한다. 따라서 `package-lock.json`의 변경이 일어나서는 안되는 것 같았는데 회사에서 프로젝트를 진행하다보면 해당 파일에 대한 변경이 수시로 일어난다. 이러한 현상에 대한 글이 별로 없어서 좀 더 찾아보았다.
+프로젝트를 진행하면서 항상 `package-lock.json`이 변경되는 경우를 자주 겪었다. 애초에 이 파일이 무엇인지, 어떤 목적으로 쓰이는지 항상 궁금했었다. npm에 공식 사이트에 들어가서 간단하게 읽어보았는데 설명이 이해되지 않았다. 공식 문서를 읽어보면 `npm install`의 경우 `package-lock.json`을 우선적으로 사용해서 해당 커맨드를 실행한다고 한다. 공식 홈페이지에 나온 설명대로라면 `package-lock.json`의 변경이 일어나서는 안되는 일 같은데 회사에서 프로젝트를 진행하다보면 해당 파일에 대한 변경이 수시로 일어난다. 이러한 현상에 대한 글이 별로 없어서 좀 더 찾아보았다.
 
 ###  package-lock.json
 
@@ -20,8 +21,7 @@ date: "2019-02-08"
   1. The module tree described by the package lock is reproduced. This means reproducing the structure described in the file, using the specific files referenced in "resolved" if available, falling back to normal package resolution using "version" if one isn’t.
   2. The tree is walked and any missing dependencies are installed in the usual fashion.
 
-간단하게 해석해보면 다음과 같다. 모듈트리는 package lock이 문제 없이  의해서 다시 만들어지
-그리고 트리가 변경되거나 누락된 종속성에 대해서는 원래 방식대로 설치된다고 명시되어 있다.
+간단하게 해석해보면 다음과 같다. 모듈트리는 package lock에 의해서 다시 만들어진다. 즉 해당 구조를 다시 만드는 것이 가능하다면 `package-lock.json`에 있는 파일을 참조하고 만약 실패한다면 `package.json`에 있는 버젼을 참조한다는 뜻이다. 또한  그리고 트리가 변경되거나 누락된 종속성에 대해서는 원래 방식대로 설치된다고 명시되어 있다.
 
 ### 해당파일을 저장소에 포함해야 하는지
 

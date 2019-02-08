@@ -10,6 +10,7 @@ const PostList = styled.ul`
   flex-flow: column;
   padding: 0 40px;
   margin: 0;
+  width: 100%;
 
   @media (max-width: 768px) {
     padding: 0 10px;
@@ -23,7 +24,7 @@ const PostListItem = styled.li`
   }
 
   & > .summary {
-    margin: 0;
+    margin: 0 0 15px 0;
   }
 
   & > .post-title {
@@ -62,7 +63,6 @@ class BlogIndex extends React.Component {
         <PostList>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
-            console.log(node);
             return (
               <PostListItem key={node.fields.slug}>
                 <h3 className="post-title">
@@ -70,7 +70,7 @@ class BlogIndex extends React.Component {
                     {title}
                   </Link>
                 </h3>
-                <p className="summary" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <p className="summary">{node.frontmatter.summary}</p>
                 <p className="date small-text">{node.frontmatter.date}</p>
               </PostListItem>
             )
@@ -95,6 +95,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "YYYY년 MM월 DD일")
             title
+            summary
           }
         }
       }
