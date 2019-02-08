@@ -48,9 +48,25 @@ const BlogPost = styled.div`
     }
     
     blockquote {
-      border-left: 3px solid black;
+      border-left: 3px solid #e1e4e6;
       margin-left: 0;
       padding-left: 2em;
+    }
+
+    hr {
+      background-color: #e1e4e6;
+      color: #e1e4e6;
+      border-width: #e1e4e6;
+    }
+  }
+
+  & > .post-footer {
+    margin-top: 30px;
+
+    .other-post-link {
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 `
@@ -87,14 +103,14 @@ class BlogPostTemplate extends React.Component {
             >
               <li>
                 {previous && (
-                  <Link to={previous.fields.slug} rel="prev">
+                  <Link className="other-post-link" to={previous.fields.slug} rel="prev">
                     &#xE000; {previous.frontmatter.title}
                   </Link>
                 )}
               </li>
               <li>
                 {next && (
-                  <Link to={next.fields.slug} rel="next">
+                  <Link className="other-post-link" to={next.fields.slug} rel="next">
                     {next.frontmatter.title} &#xE001;
                   </Link>
                 )}
