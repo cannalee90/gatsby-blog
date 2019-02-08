@@ -19,6 +19,14 @@ const GlobalStyle = createGlobalStyle`
     color: #4d5256;
   }
 
+  code {
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
+    background-color: #f3f5f6;
+    font-size: 85%;
+    padding: .2em .4em;
+    border-radius: 3px;
+  }
+
   a {
     color: #4c80f1;
     text-decoration: none;
@@ -27,9 +35,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  p {
+  p, li, ui {
     font-size: 17px;
     line-height: 1.9em;
+    margin: 0 0 0.5em;
   }
 
   h1 {

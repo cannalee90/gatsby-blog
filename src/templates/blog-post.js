@@ -10,6 +10,11 @@ const BlogPost = styled.div`
   padding: 30px 60px;
   margin: 0;
 
+  p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   @media (max-width: 768px) {
     padding: 30px 20px;
   }
@@ -110,7 +115,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY년 MM월 DD일")
       }
     }
   }
