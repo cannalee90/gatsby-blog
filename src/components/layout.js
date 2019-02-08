@@ -93,6 +93,9 @@ const Content = styled.main`
     margin-top: 80px;
     min-height: calc(100vh - 200px);
   }
+  @media (max-width: 940px) {
+    min-width: 100%;
+  }
 `
 
 class Layout extends React.Component {

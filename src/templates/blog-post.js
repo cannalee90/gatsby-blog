@@ -40,11 +40,18 @@ const BlogPost = styled.div`
   & > .post-body {
     font-weight: 400;
     border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 50px;
 
     h2, h3, h4, h5, h6 {
       margin-top: 1.5em;
       margin-bottom: 1em;
-    }  
+    }
+    
+    blockquote {
+      border-left: 3px solid black;
+      margin-left: 0;
+      padding-left: 2em;
+    }
   }
 `
 
