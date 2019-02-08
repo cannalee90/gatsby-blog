@@ -9,7 +9,7 @@ import Utteranc from '../components/utteranc';
 const BlogPost = styled.div`
   padding: 30px 60px;
   margin: 0;
-
+  
   p {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -40,6 +40,11 @@ const BlogPost = styled.div`
   & > .post-body {
     font-weight: 400;
     border-bottom: 1px solid #e6e6e6;
+
+    h2, h3, h4, h5, h6 {
+      margin-top: 1.5em;
+      margin-bottom: 1em;
+    }  
   }
 `
 
@@ -61,8 +66,7 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.date}
             </p>
           </div>
-          <div className="post-body">
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div className="post-body" dangerouslySetInnerHTML={{ __html: post.html }}>
           </div>
           <div className="post-footer">
             <ul
