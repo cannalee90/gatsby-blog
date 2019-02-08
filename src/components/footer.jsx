@@ -1,5 +1,4 @@
 import * as React  from 'react';
-import { Link } from 'gatsby';
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -35,10 +34,6 @@ const Copyright = styled.div`
 
 
 export default class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { author } = this.props;
     return (

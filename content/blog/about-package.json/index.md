@@ -2,6 +2,7 @@
 title: package-lock.json에 대해서
 date: "2019-02-08"
 summary: package-lock.json에 대해서 알아보았습니다.
+tag: package npm package-lock
 ---
 
 ### 개요

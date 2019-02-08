@@ -22,10 +22,6 @@ const RootLink = styled.div`
 `
 
 export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { title } = this.props;
     return (

@@ -75,12 +75,15 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const { previous, next } = this.props.pageContext
-    const { author, title } = this.props.data.site.siteMetadata;
 
     return (
       <Layout>
         <BlogPost>
-          <SEO title={post.frontmatter.title} description={post.excerpt} />
+          <SEO
+            title={post.frontmatter.title}
+            description={post.excerpt}
+            keywords={post.frontmatter.tag.split(' ')}
+          />
           <div className="post-title-wrapper">
             <h1 className="post-title">
               {post.frontmatter.title}
@@ -143,6 +146,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "YYYY년 MM월 DD일")
+        tag
       }
     }
   }
