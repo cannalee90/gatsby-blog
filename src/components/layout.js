@@ -16,16 +16,52 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'Spoqa Han Sans', 'Sans-serif';
-    color: #505050;
+    color: #4d5256;
   }
 
   a {
-    color: unset;
+    color: #4c80f1;
     text-decoration: none;
     &:hover {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
+
+  p {
+    font-size: 17px;
+    line-height: 1.9em;
+  }
+
+  h1 {
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  small-text {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  paragraph {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
 `
 
 const WrapperContainer = styled.div`
@@ -43,6 +79,10 @@ const Content = styled.main`
   margin-bottom: 60px;
   min-height: calc(100vh - 240px);
   background-color: #fff;
+  @media (max-width: 768px) {
+    margin-top: 80px;
+    min-height: calc(100vh - 200px);
+  }
 `
 
 class Layout extends React.Component {

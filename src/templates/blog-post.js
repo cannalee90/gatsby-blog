@@ -21,19 +21,19 @@ const BlogPost = styled.div`
 
     .post-title {
       margin: 0;
-
     }
 
     .post-time {
       margin: 0;
       font-weight: 100;
       font-size: 14px;
-      margin-top: 10px;
+      margin: 10px 0;
+
     }
   }
 
   & > .post-body {
-    font-weight: 100;
+    font-weight: 400;
     border-bottom: 1px solid #e6e6e6;
   }
 `
@@ -72,21 +72,21 @@ class BlogPostTemplate extends React.Component {
               <li>
                 {previous && (
                   <Link to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
+                    &#xE000; {previous.frontmatter.title}
                   </Link>
                 )}
               </li>
               <li>
                 {next && (
                   <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
+                    {next.frontmatter.title} &#xE001;
                   </Link>
                 )}
               </li>
             </ul>
 
           </div>
-          <Utteranc></Utteranc>
+          <Utteranc title={post.frontmatter.title}></Utteranc>
 
         </BlogPost>
       </Layout>

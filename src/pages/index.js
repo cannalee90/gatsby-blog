@@ -23,18 +23,28 @@ const PostListItem = styled.li`
   }
 
   & > .summary {
-    font-weight: 100;
     margin: 0;
-    font-size: 14px;
   }
 
   & > .post-title {
-    font-size: 23px;
     margin-top: 0;
     margin-bottom: 23px;
+    color: #4d5256;
+
+    & > a {
+      color: #4d5256;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   @media (max-width: 768px) {
     padding: 30px 10px;
+  }
+
+  & > .date {
+    font-weight: 100;
+    font-size: 14px;
   }
 `
 
@@ -52,14 +62,16 @@ class BlogIndex extends React.Component {
         <PostList>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
+            console.log(node);
             return (
               <PostListItem key={node.fields.slug}>
-                <h2 class="post-title">
+                <h3 className="post-title">
                   <Link to={node.fields.slug}>
                     {title}
                   </Link>
-                </h2>
+                </h3>
                 <p className="summary" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <p className="date small-text">{node.frontmatter.date}</p>
               </PostListItem>
             )
           })}
