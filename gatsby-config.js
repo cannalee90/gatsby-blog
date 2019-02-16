@@ -58,6 +58,35 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-remove-serviceworker',
-    'gatsby-plugin-sitemap'
+    'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Unfixed blog",
+        short_name: "Unfixed",
+        start_url: "/",
+        background_color: "#4d5256",
+        theme_color: "#2D343E",
+        display: "standalone",
+        icon: "src/assets/logo.png", // This path is relative to the root of the site.
+        icons: [
+          {
+            src: `/favicons/favicon-16x16.png`,
+            sizes: `16x16`,
+            type: `image/png`,
+          },
+          {
+            src: `/favicons/favicon-32x32.png`,
+            sizes: `32x32`,
+            type: `image/png`,
+          },
+          {
+            src: `/favicons/apple-touch-icon.png`,
+            sizes: `180x180`,
+            type: `image/png`,
+          },
+        ],
+      },
+    },
   ],
 }

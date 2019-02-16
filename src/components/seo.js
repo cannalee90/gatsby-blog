@@ -53,7 +53,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 name: 'google-site-verification',
                 content: 'cpkV-DOyP3bsYnMEe5JcTorV3Yr9calyIjUrgUKJtSU',
-              }
+              },
             ]
               .concat(
                 keywords.length > 0
@@ -64,6 +64,25 @@ function SEO({ description, lang, meta, keywords, title }) {
                   : []
               )
               .concat(meta)}
+            link={[
+              {
+                rel: 'apple-touch-icon',
+                sizes: '180x180',
+                href: '/favicons/apple-touch-icon.png'
+              },
+              {
+                rel: 'icon',
+                types: 'image/png',
+                size: '32x32',
+                href: '/favicons/favicon-32x32.png'
+              },
+              {
+                rel: 'icon',
+                types: 'image/png',
+                size: '16x16',
+                href: '/favicons/favicon-16x16.png'
+              }
+            ]}
           />
         )
       }}
