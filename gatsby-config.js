@@ -18,13 +18,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -68,7 +61,7 @@ module.exports = {
         background_color: "#4d5256",
         theme_color: "#2D343E",
         display: "standalone",
-        icon: "src/assets/logo.png", // This path is relative to the root of the site.
+        icon: "static/logo.png", // This path is relative to the root of the site.
         icons: [
           {
             src: `/favicons/favicon-16x16.png`,
