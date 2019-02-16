@@ -3,7 +3,7 @@ module.exports = {
     title: `Unfixed blog`,
     author: `unfixed`,
     description: `Personal tech blog by unfixed`,
-    siteUrl: `https://happy-heyrovsky-a01efb.netlify.com/`,
+    siteUrl: `https://blgo.kangho.me`,
     social: {
       twitter: `unfixed2017`,
       github: 'cannalee90',
@@ -58,5 +58,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-remove-serviceworker',
+    'gatsby-plugin-sitemap'
   ],
 }
