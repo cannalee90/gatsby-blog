@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://blgo.kangho.me`,
     siteVerification: 'cpkV-DOyP3bsYnMEe5JcTorV3Yr9calyIjUrgUKJtSU',
     ogType: 'website',
-    ogImage: 'https://blog.kangho.me/logo_og.png',
+    ogImage: 'https://blog.kangho.me/logo_og1.png',
     social: {
       twitter: `unfixed2017`,
       github: 'cannalee90',
