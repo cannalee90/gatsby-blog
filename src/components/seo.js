@@ -32,11 +32,11 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:type`,
-                content: `website`,
+                content: data.site.siteMetadata.ogType,
               },
               {
                 property: 'og:image',
-                content: 'https://blog.kangho.me/logo.png'
+                content: data.site.siteMetadata.ogImage,
               },
               {
                 name: `twitter:card`,
@@ -56,7 +56,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: 'google-site-verification',
-                content: 'cpkV-DOyP3bsYnMEe5JcTorV3Yr9calyIjUrgUKJtSU',
+                content: data.site.siteMetadata.siteVerification,
               },
             ]
               .concat(
