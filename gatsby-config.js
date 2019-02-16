@@ -4,9 +4,9 @@ module.exports = {
     author: `unfixed`,
     description: `Personal tech blog by unfixed`,
     siteUrl: `https://blgo.kangho.me`,
-    ogImage: 'https://blog.kangho.me/logo_og.png',
     siteVerification: 'cpkV-DOyP3bsYnMEe5JcTorV3Yr9calyIjUrgUKJtSU',
     ogType: 'website',
+    ogImage: 'https://blog.kangho.me/logo_og.png',
     social: {
       twitter: `unfixed2017`,
       github: 'cannalee90',

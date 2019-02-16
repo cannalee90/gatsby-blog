@@ -10,6 +10,7 @@ function SEO({ description, lang, meta, keywords, title }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
+        console.log(data);
         return (
           <Helmet
             htmlAttributes={{
@@ -106,6 +107,7 @@ SEO.propTypes = {
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
+
 }
 
 export default SEO
@@ -117,6 +119,10 @@ const detailsQuery = graphql`
         title
         description
         author
+        siteVerification
+        siteUrl
+        ogType
+        ogImage
       }
     }
   }

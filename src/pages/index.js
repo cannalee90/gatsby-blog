@@ -57,6 +57,7 @@ class BlogIndex extends React.Component {
       <Layout
       >
         <SEO
+          title='Unfixed blog'
           keywords={['js', `javascript`, `react`, 'angular', 'css']}
         />
         <PostList>
