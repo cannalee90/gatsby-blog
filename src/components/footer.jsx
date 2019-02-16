@@ -17,7 +17,7 @@ const IconList = styled.ul`
   align-items: center;
   list-style: none;
   margin-left: auto;
-  padding: 0
+  padding: 0;
   & > li {
     display: inline-block;
     font-size: 11px;
