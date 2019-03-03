@@ -20,11 +20,40 @@ const GlobalStyle = createGlobalStyle`
   }
 
   code {
-    font-family: 'Spoqa Han Sans', 'Sans-serif';
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     background-color: #f3f5f6;
     font-size: 85%;
     padding: .2em .4em;
     border-radius: 3px;
+  }
+
+  pre[class*="language-"] {
+    background-color: #f3f5f6;
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
+
+    & > code[class*="language-"] {
+      padding: 0;
+    }
+  }
+
+  code[class*="language-"] {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    background-color: #f3f5f6;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    tab-size: 4;
+    hyphens: none;
+    padding: .2em .4em;
+    margin: .5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
   }
 
   a {
